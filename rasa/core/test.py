@@ -299,14 +299,14 @@ class EvaluationStore:
                 filter(
                     lambda x: x.get(ENTITY_ATTRIBUTE_TEXT) == text, self.entity_targets
                 ),
-                key=lambda x: x[ENTITY_ATTRIBUTE_START],  # type: ignore[literal-required]
+                key=lambda x: x[ENTITY_ATTRIBUTE_START],  # type: ignore[literal-required] # noqa: E501
             )
             entity_predictions = sorted(
                 filter(
                     lambda x: x.get(ENTITY_ATTRIBUTE_TEXT) == text,
                     self.entity_predictions,
                 ),
-                key=lambda x: x[ENTITY_ATTRIBUTE_START],  # type: ignore[literal-required]
+                key=lambda x: x[ENTITY_ATTRIBUTE_START],  # type: ignore[literal-required] # noqa: E501
             )
 
             i_pred, i_target = 0, 0
